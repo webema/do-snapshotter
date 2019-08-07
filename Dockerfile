@@ -1,13 +1,7 @@
-FROM bash:5
+FROM ruby:2.6-alpine3.10
 
-RUN apk --update add jq && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm /var/cache/apk/*
+RUN gem install droplet_kit
 
-ENV VOLUME_ID=67890 \
-  DIGITALOCEAN_TOKEN=12345 \
-  SNAPSHOT_NAME=generic-snapshot
+COPY snapshotter.rb /
 
-COPY script.sh /
-
-CMD ["bash", "/script.sh"]
+CMD ["ruby", "snapshotter.rb"]
