@@ -5,6 +5,8 @@ Currently it is tailored towards the kubernetes services and the volumes created
 It will create snapshots for *all* your volumes created by kubernetes.
 By default those snapshots will be deleted after 7 days.
 
+https://hub.docker.com/r/dtrierweiler/do-snapshotter
+
 ## Usage
 
 First configure a k8s-secret with the key `access-token` and create a token at https://cloud.digitalocean.com/account/api/tokens  
