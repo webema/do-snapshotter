@@ -1,0 +1,5 @@
+images:
+  - image_name: ema/do-snapshotter
+    docker_repo: nexus.devops-e.de:8090
+    dockerfile: Dockerfile
+    tagging: git
