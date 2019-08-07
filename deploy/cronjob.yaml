@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: do-snapshotter
-            image: nexus.devops-e.de:8090/ema/do-snapshotter
+            image: dtrierweiler/do-snapshotter
             env:
               - name: DIGITALOCEAN_TOKEN
                 valueFrom:
